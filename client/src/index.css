@@ -1,0 +1,197 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --background: #07172e;
+  --background-light: #142743;
+  --primary: #4fd9bd;
+  --secondary: #e6f1ef;
+  --error: #ec6e6e;
+}
+
+html {
+  overflow-x: hidden;
+  margin-right: calc(-1 * (100vw - 100%));
+}
+
+::-webkit-scrollbar {
+  background: var(--background);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--background-light);
+}
+
+body {
+  display: flex;
+  font-family: system-ui, -apple-system, sans-serif;
+  background-color: var(--background);
+  color: var(--secondary);
+  line-height: 1.25;
+  min-height: 100vh;
+}
+
+#root {
+  margin: 0 auto;
+  width: 80%;
+  max-width: 1000px;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  width: 100%;
+}
+
+nav {
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--background-light);
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+nav a:first-of-type {
+  margin-right: auto;
+}
+
+nav svg {
+  color: var(--primary);
+}
+
+nav .buttons {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+button,
+a {
+  all: unset;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.2s ease-in-out;
+}
+
+button {
+  border: 1px solid var(--primary);
+  color: var(--primary);
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  display: flex;
+  justify-content: center;
+}
+
+button:hover {
+  background-color: var(--primary);
+  color: var(--background);
+  border: 1px solid var(--background-light);
+}
+
+a:hover {
+  color: var(--primary);
+}
+
+input {
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--secondary);
+  border-radius: 0.25rem;
+  background-color: #ffffffaa;
+  transition: all 0.2s ease-in-out;
+}
+
+input:focus {
+  outline: none;
+  border: 1px solid var(--primary);
+}
+
+input::placeholder {
+  color: var(--background);
+  opacity: 0.6;
+}
+
+form, 
+.confirm {
+  background-color: var(--background-light);
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  width: 100%;
+  max-width: 30rem;
+  padding: 3.5rem 2rem;
+  border-radius: 0.25rem;
+}
+
+form label {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.75rem;
+  gap: 0.5rem;
+  transition: all 0.2s ease-in-out;
+}
+
+form > p:first-of-type,
+.confirm > p:first-of-type {
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+  text-align: center;
+  letter-spacing: 1px;
+  font-weight: 500;
+}
+
+form > div:last-of-type {
+  display: flex;
+  justify-content: center;
+  gap: 0.25rem;
+  font-size: 0.75rem;
+  margin-top: 0.5rem;
+}
+
+form > div:last-of-type a {
+  font-weight: 700;
+}
+
+form button {
+  margin-top: 1.25rem;
+}
+
+.error-message {
+  font-size: 0.75rem;
+  background-color: var(--error);
+  color: var(--background);
+  border-radius: 0.25rem;
+  padding: 0.5rem 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.success-message {
+  font-size: 0.75rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.password-reset {
+  font-size: 0.75rem;
+  align-self: end;
+}
+
+.password-reset p:last-of-type {
+  font-size: 0.75rem;
+}
+
+.buttons-container {
+  display: flex;
+  gap: 1rem;
+}
